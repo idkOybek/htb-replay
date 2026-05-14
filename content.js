@@ -198,13 +198,18 @@ function processAcademyForms() {
                 // === РАСКРЫВАЕМ АККОРДЕОН АВТОМАТИЧЕСКИ ===
                 const collapseDiv = form.closest('.collapse');
                 if (collapseDiv && !collapseDiv.classList.contains('collapse-open')) {
-                    const collapseTitle = collapseDiv.querySelector('.collapse-title');
-                    if (collapseTitle) {
-                        collapseTitle.click(); // Эмулируем реальный клик пользователя по заголовку
-                    } else {
-                        const checkbox = collapseDiv.querySelector('input[type="checkbox"]');
-                        if (checkbox) checkbox.click();
-                    }
+                    // Ждем немного, чтобы Vue успел загрузиться и привязать события
+                    setTimeout(() => {
+                        if (!collapseDiv.classList.contains('collapse-open')) {
+                            const collapseTitle = collapseDiv.querySelector('.collapse-title');
+                            if (collapseTitle) {
+                                collapseTitle.click(); // Эмулируем реальный клик
+                            } else {
+                                const checkbox = collapseDiv.querySelector('input[type="checkbox"]');
+                                if (checkbox) checkbox.click();
+                            }
+                        }
+                    }, 1000);
                 }
                 
                 const clonedForm = form.cloneNode(true);
