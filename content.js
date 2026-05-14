@@ -1,3 +1,5 @@
+console.log("[HTB Replay] Extension successfully loaded!");
+
 // Функция для показа тост-уведомлений (всплывашки справа сверху)
 function showToast(message, isSuccess) {
     let toastContainer = document.getElementById('htb-replay-toast-container');
@@ -198,18 +200,17 @@ function processAcademyForms() {
                 // === РАСКРЫВАЕМ АККОРДЕОН АВТОМАТИЧЕСКИ ===
                 const collapseDiv = form.closest('.collapse');
                 if (collapseDiv && !collapseDiv.classList.contains('collapse-open')) {
-                    // Ждем немного, чтобы Vue успел загрузиться и привязать события
-                    setTimeout(() => {
-                        if (!collapseDiv.classList.contains('collapse-open')) {
-                            const collapseTitle = collapseDiv.querySelector('.collapse-title');
-                            if (collapseTitle) {
-                                collapseTitle.click(); // Эмулируем реальный клик
-                            } else {
-                                const checkbox = collapseDiv.querySelector('input[type="checkbox"]');
-                                if (checkbox) checkbox.click();
-                            }
-                        }
-                    }, 1000);
+                    console.log("[HTB Replay] Accordion closed, forcing open for:", form.id);
+                    const checkbox = collapseDiv.querySelector('input[type="checkbox"]');
+                    if (checkbox) {
+                        checkbox.checked = true;
+                        checkbox.dispatchEvent(new Event('change', { bubbles: true }));
+                        checkbox.dispatchEvent(new Event('input', { bubbles: true }));
+                    }
+                    const title = collapseDiv.querySelector('.collapse-title');
+                    if (title) {
+                        title.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true, view: window }));
+                    }
                 }
                 
                 const clonedForm = form.cloneNode(true);
