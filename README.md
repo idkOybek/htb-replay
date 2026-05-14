@@ -1,23 +1,23 @@
-# HTB Lab Replay
+# 🎮 HTB Lab Replay
 
-HTB Lab Replay is a browser extension that allows you to replay already completed HackTheBox Labs and Academy modules by checking your answers locally. It prevents completed answers from being submitted to the server and gives you a clean slate to practice.
+Ever wanted to replay a HackTheBox lab or Academy module you've already completed, just to practice or show a friend? Annoyed that all the flags and answers are already filled in and locked? 
 
-## Features
-- **Local Validation**: Validates flags and answers entirely within the browser.
-- **Support for Both Platforms**: Works seamlessly on HTB Main Platform (app.hackthebox.com) and HTB Academy (academy.hackthebox.com).
-- **Auto-Expand Accordions**: Automatically opens hidden solved questions on HTB Academy.
-- **Visual Progress**: Dynamic progress bar synchronization on Academy to reflect your local progress.
-- **Internationalization**: Fully supports English and Russian (automatically detects your browser language).
+**HTB Lab Replay** is a lightweight browser extension that fixes exactly this. It intercepts already-solved questions, wipes the answers from your screen, unlocks the input fields, and lets you solve them all over again. The best part? It checks your new answers entirely *locally* so it doesn't mess with your actual HTB profile or send duplicate requests to the server.
 
-## Installation
-1. Download or clone this repository.
-2. Open your Chromium-based browser (Chrome, Brave, Edge) and navigate to `chrome://extensions/` (or `brave://extensions/`).
-3. Enable **Developer Mode** in the top right corner.
+### ✨ What it does
+- **Cleans the Slate:** Hides the correct answers you've already submitted and unlocks the text fields so you can type again.
+- **Local Checking:** Validates your flags right in the browser. You get that satisfying "Correct! 🎉" notification without hitting the HTB servers.
+- **Smart Academy Support:** Fully supports HTB Academy. It automatically expands those annoying closed accordions for solved questions and dynamically tracks your *local* replay progress on the module progress bar!
+- **Dual-Platform:** Works on both the main HTB Labs (`app.hackthebox.com`) and Academy (`academy.hackthebox.com`). You can toggle them independently via the extension popup.
+- **Bilingual:** Speaks English and Russian right out of the box based on your browser settings.
+
+### 🚀 How to install (Developer Mode)
+Since this extension isn't in the Chrome Web Store (yet!), you can install it manually in a few seconds:
+1. Clone or download this repository to your computer.
+2. Open your browser (Chrome, Brave, Edge, etc.) and go to the extensions page (`chrome://extensions/` or `brave://extensions/`).
+3. Toggle on **Developer mode** in the top right corner.
 4. Click **Load unpacked** and select the folder containing this extension.
-5. Open an already solved HTB Lab or Academy module to start practicing again!
-
-## Usage
-Click on the extension icon in your browser toolbar to toggle the replay functionality individually for HTB Labs and HTB Academy.
+5. Pin the extension to your toolbar, open an already-solved HTB page, and start hacking again!
 
 ---
-Created to help the cybersecurity community practice effectively.
+*Built to help the cybersecurity community train better and retain knowledge.* Happy hacking! 👾
