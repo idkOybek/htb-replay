@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_extName__",
+  "version": "1.0",
+  "description": "__MSG_extDesc__",
+  "default_locale": "en",
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "icons": {
+    "128": "icon.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.hackthebox.com/*",
+        "*://*.hackthebox.eu/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

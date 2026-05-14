@@ -1,0 +1,13 @@
+{
+  "extName": { "message": "HTB Lab Replay" },
+  "extDesc": { "message": "Replay already completed HTB labs by checking answers locally without submitting them to the server." },
+  "popupTitle": { "message": "HTB Lab Replay" },
+  "htbLabs": { "message": "HTB Labs" },
+  "htbAcademy": { "message": "HTB Academy" },
+  "reloadInfo": { "message": "Page will reload automatically on toggle" },
+  "toastCorrect": { "message": "Correct! 🎉" },
+  "toastWrong": { "message": "Wrong. Try again!" },
+  "placeholderApp": { "message": "Enter answer to check..." },
+  "placeholderAcademy": { "message": "Type your answer & press Enter..." },
+  "btnCheckLocal": { "message": "Check Local" }
+}

@@ -1,0 +1,13 @@
+{
+  "extName": { "message": "HTB Lab Replay" },
+  "extDesc": { "message": "Позволяет проходить уже завершенные задания HTB заново, проверяя ответы локально без отправки на сервер." },
+  "popupTitle": { "message": "HTB Lab Replay" },
+  "htbLabs": { "message": "HTB Labs (Главная)" },
+  "htbAcademy": { "message": "HTB Academy" },
+  "reloadInfo": { "message": "Страница автоматически перезагрузится" },
+  "toastCorrect": { "message": "Правильно! 🎉" },
+  "toastWrong": { "message": "Неправильно. Попробуйте еще раз!" },
+  "placeholderApp": { "message": "Введите ответ для проверки..." },
+  "placeholderAcademy": { "message": "Введите ответ и нажмите Enter..." },
+  "btnCheckLocal": { "message": "Check Local" }
+}
